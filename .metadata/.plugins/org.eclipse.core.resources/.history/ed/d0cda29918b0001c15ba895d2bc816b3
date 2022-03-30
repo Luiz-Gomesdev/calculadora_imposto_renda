@@ -1,0 +1,11 @@
+package br.com.luiz.imposto.entities;
+
+public class PessoaJuridica extends Contribuinte{
+	
+	
+	
+	@Override
+	public double calculoImposto() {
+		return this.getRendaBruta() * 0.1;
+	}
+}

@@ -1,0 +1,61 @@
+package br.com.luiz.imposto.entities;
+
+public class Contribuinte {
+	
+	private String nome;
+	private double rendaBruta;
+//	private double aliquota;
+//	private double parcelaDeduzir;
+	
+	public Contribuinte() {
+	}
+
+	public Contribuinte(String nome, double rendaBruta, double aliquota, double parcelaDeduzir) {
+		this.nome = nome;
+		this.rendaBruta = rendaBruta;
+		this.aliquota = aliquota;
+//		this.parcelaDeduzir = parcelaDeduzir;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double getRendaBruta() {
+		return rendaBruta;
+	}
+
+	public void setRendaBruta(double rendaBruta) {
+		this.rendaBruta = rendaBruta;
+	}
+
+	public double getAliquota() {
+		return aliquota;
+	}
+
+	public void setAliquota(double aliquota) {
+		this.aliquota = aliquota;
+	}
+//
+//	public double getParcelaDeduzir() {
+//		return parcelaDeduzir;
+//	}
+//
+//	public void setParcelaDeduzir(double parcelaDeduzir) {
+//		this.parcelaDeduzir = parcelaDeduzir;
+	}
+	
+	public double calculoImposto() {
+		return rendaBruta * aliquota;
+	}
+	
+	public void imprimeImposto() {
+		System.out.println("O valor a ser pago de imposto é: " + calculoImposto());
+	}
+	
+
+}

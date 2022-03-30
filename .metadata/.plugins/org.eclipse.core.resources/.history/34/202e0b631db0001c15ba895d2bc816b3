@@ -1,0 +1,33 @@
+package br.com.luiz.imposto.entities;
+
+public abstract class Contribuinte {
+	
+	private String nome;
+	private double rendaBruta;
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double getRendaBruta() {
+		return rendaBruta;
+	}
+
+	public void setRendaBruta(double rendaBruta) {
+		this.rendaBruta = rendaBruta;
+	}
+
+	public abstract double calcularImposto(); //como não sabemos calcular imposto de contribuinte e queremos forçar que as classes filhas declarem
+
+	@Override
+	public String toString() {
+		return "Contribuinte: " + nome + "/n" + 
+				"Renda Bruta: " + rendaBruta;
+	}
+	
+	
+}

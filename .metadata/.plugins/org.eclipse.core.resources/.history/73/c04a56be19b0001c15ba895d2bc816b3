@@ -1,0 +1,19 @@
+package br.com.luiz.imposto.entities;
+
+public class PessoaFisica extends Contribuinte {
+
+	@Override
+	public double calculoImposto() {
+		if(this.getRendaBruta()<= 1400) {
+			return 0;
+		}if(this.getRendaBruta()<= 2100) {
+			return this.getRendaBruta() * 0.1 + 100;
+		}if(this.getRendaBruta()<= 2800) {
+			return this.getRendaBruta() * 0.15 + 270;
+		}if(this.getRendaBruta()<= 3600) {
+			return this.getRendaBruta() * 0.25 + 500;
+		}if(this.getRendaBruta() > 3600) {
+			return this.getRendaBruta() * 0.30 + 700;
+		}
+	}
+}

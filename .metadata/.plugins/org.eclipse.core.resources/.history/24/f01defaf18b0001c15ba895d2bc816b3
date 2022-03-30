@@ -1,0 +1,16 @@
+package br.com.luiz.imposto.entities;
+
+public class PessoaJuridica extends Contribuinte{
+	
+	
+	
+	@Override
+	public double calculoImposto() {
+		return this.getRendaBruta() * 0.1;
+	}
+	
+	@Override
+	public void imprimeImposto() {
+		System.out.println("O valor a ser pago de imposto PJ é: " + calculoImposto());
+	}
+}

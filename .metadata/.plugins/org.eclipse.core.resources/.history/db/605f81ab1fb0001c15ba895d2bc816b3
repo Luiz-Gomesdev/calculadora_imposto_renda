@@ -1,0 +1,22 @@
+package br.com.luiz.imposto.application;
+
+import br.com.luiz.imposto.entities.PessoaFisica;
+import br.com.luiz.imposto.entities.PessoaJuridica;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		PessoaFisica pf = new PessoaFisica();
+		PessoaJuridica pj = new PessoaJuridica();
+		
+		pf.setNome("Luiz");
+		pf.setCpf("113.345.569-83");
+		pf.setRendaBruta(3000);
+		
+		pf.calcularImposto();
+		
+		System.out.println(pf);
+	}
+
+}

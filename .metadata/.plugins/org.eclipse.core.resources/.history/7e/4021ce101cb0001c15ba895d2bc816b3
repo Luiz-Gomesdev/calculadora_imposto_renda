@@ -1,0 +1,39 @@
+package br.com.luiz.imposto.entities;
+
+public class PessoaFisica extends Contribuinte {
+	
+	private String cpf;
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	@Override
+	public double calcularImposto() {
+		
+		double renda = this.getRendaBruta(); //pra não precisar escrever this.getRendaBruta() toda hora
+		
+		if(renda <= 1400) {
+			return 0;
+		}
+	}
+
+//	@Override
+//	public double calcularImposto() {
+//		if(this.getRendaBruta()<= 1400) {
+//			return 0;
+//		}if(this.getRendaBruta()<= 2100) {
+//			return this.getRendaBruta() * 0.1 + 100;
+//		}if(this.getRendaBruta()<= 2800) {
+//			return this.getRendaBruta() * 0.15 + 270;
+//		}if(this.getRendaBruta()<= 3600) {
+//			return this.getRendaBruta() * 0.25 + 500;
+//		}if(this.getRendaBruta() > 3600) {
+//			return this.getRendaBruta() * 0.30 + 700;
+//		}
+//	}
+}

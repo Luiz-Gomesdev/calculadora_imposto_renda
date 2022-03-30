@@ -1,0 +1,16 @@
+package br.com.luiz.imposto.application;
+
+import br.com.luiz.imposto.entities.Contribuinte;
+import br.com.luiz.imposto.entities.PessoaFisica;
+import br.com.luiz.imposto.entities.PessoaJuridica;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		PessoaFisica pf = new PessoaFisica();
+		PessoaJuridica pj = new PessoaJuridica();
+		
+	}
+
+}
